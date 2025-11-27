@@ -27,7 +27,7 @@ cd Ollama-API
 
 2. Make the script executable:
 ```bash
-chmod +x llamaapi.sh
+chmod +x llamaapi.sh moreControl.sh 
 ```
 
 3. Ensure Ollama is running:
