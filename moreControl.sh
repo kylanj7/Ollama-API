@@ -31,11 +31,3 @@ curl -X POST http://localhost:11434/api/generate -d '{
     "repeat_penalty": 1.1
   }
 }' | jq -r '.response'
-
-echo "********** Performance Metrics **********"
-echo "$RESPONSE" | jq -r '
-  "Tokens generated: \(.eval_count)",
-  "Generation time: \(.eval_duration) ns",
-  "Total time: \(.total_duration) ns",
-  "Speed: \(((.eval_count / .eval_duration) * 1000000000 * 100 | floor) / 100) tokens/sec"
-'
