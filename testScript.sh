@@ -7,7 +7,7 @@ read -p "Enter the testing prompt you wish to infer here: " PROMPT
 curl -X POST http://localhost:11434/api/generate -d '{
   "model": "'"$MODEL"'",
   "prompt": "'"$PROMPT"'",
-  "system": "You are being tested for development. Give complex responses that test your limits for fair evaluation.",
+  "system": "<value>",
   "stream": false,
   "options": {
     "temperature": '"<value>"',
