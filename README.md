@@ -266,6 +266,11 @@ Install `jq` or remove `| jq -r '.response'` from the script to see raw JSON
 - Reduce `num_ctx` (context length)
 - Use a smaller model (e.g., 3B instead of 7B)
 - Check CPU/GPU usage
+Install htop & nvtop to monitor local machine resources:
+```bash
+sudo apt install nvtop
+sudo apt install htop
+```
 
 ## Performance Tips
 
