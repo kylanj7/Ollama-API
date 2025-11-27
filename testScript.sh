@@ -18,15 +18,3 @@ curl -X POST http://localhost:11434/api/generate -d '{
     "repeat_penalty": <value>
   }
 }' | jq -r '.response'
-
-echo "********** Performance Metrics **********"
-EVAL_COUNT=$(echo "$RESPONSE" | jq -r '.eval_count')
-EVAL_DURATION=$(echo "$RESPONSE" | jq -r '.eval_duration')
-TOTAL_DURATION=$(echo "$RESPONSE" | jq -r '.total_duration')
-
-TOKENS_PER_SEC=$(echo "scale=10; $EVAL_COUNT / $EVAL_DURATION" | bc)
-
-echo "Tokens generated: $EVAL_COUNT"
-echo "Generation time: $(echo "scale=2; $EVAL_DURATION / 1000000000" | bc)s"
-echo "Total time: $(echo "scale=2; $TOTAL_DURATION / 1000000000" | bc)s"
-echo "Tokens/second: $TOKENS_PER_SEC"
