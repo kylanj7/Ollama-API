@@ -8,7 +8,7 @@ read -p "Enter MAX number of tokens a.k.a response length (default 512): " TOKEN
 read -p "Model Temperature (controls how consistent vs. random the model's outputs are. default 0.7): " TEMP
 read -p "Enter maximum context length (larger = more memory but slower inference. default 2048): " CONTEXT
 read -p "Enter top_k (larger values decrease predictable words (range: 1-100, default: 40): " TOP_K
-read -p "Low values only allows high-confidence tokens, higher value allows more variety (range = 0.50-1.0): " TOP_P
+read -p "Low values only allow high-confidence tokens, higher value allows more variety (range = 0.50-1.0): " TOP_P
 
 # Set defaults for all parameters
 TEMP=${TEMP:-0.7}
